@@ -17,6 +17,7 @@
 #include <QtWidgets/QMainWindow>
 #include <QtWidgets/QStatusBar>
 #include <QtWidgets/QWidget>
+#include "renderarea.h"
 
 QT_BEGIN_NAMESPACE
 
@@ -24,6 +25,7 @@ class Ui_MainWindow
 {
 public:
     QWidget *centralWidget;
+    RenderArea *renderArea;
     QStatusBar *statusBar;
 
     void setupUi(QMainWindow *MainWindow)
@@ -33,6 +35,9 @@ public:
         MainWindow->resize(400, 300);
         centralWidget = new QWidget(MainWindow);
         centralWidget->setObjectName(QStringLiteral("centralWidget"));
+        renderArea = new RenderArea(centralWidget);
+        renderArea->setObjectName(QStringLiteral("renderArea"));
+        renderArea->setGeometry(QRect(30, 40, 261, 191));
         MainWindow->setCentralWidget(centralWidget);
         statusBar = new QStatusBar(MainWindow);
         statusBar->setObjectName(QStringLiteral("statusBar"));

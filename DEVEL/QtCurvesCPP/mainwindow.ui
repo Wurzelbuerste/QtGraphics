@@ -14,23 +14,28 @@
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralWidget">
-   <widget class="QCheckBox" name="checkBox">
+   <widget class="RenderArea" name="renderArea" native="true">
     <property name="geometry">
      <rect>
-      <x>120</x>
-      <y>120</y>
-      <width>92</width>
-      <height>23</height>
+      <x>30</x>
+      <y>40</y>
+      <width>261</width>
+      <height>191</height>
      </rect>
-    </property>
-    <property name="text">
-     <string>CheckBox</string>
     </property>
    </widget>
   </widget>
   <widget class="QStatusBar" name="statusBar"/>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
+ <customwidgets>
+  <customwidget>
+   <class>RenderArea</class>
+   <extends>QWidget</extends>
+   <header>renderarea.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
  <resources/>
  <connections/>
 </ui>
